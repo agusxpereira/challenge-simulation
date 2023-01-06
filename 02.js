@@ -12,6 +12,19 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
+  var onlyString = strings.sort(function (a, b){
+    if (a.length > b.length) {
+    return -1;
+  }
+  if (a.length < b.length) {
+    return 1;
+  }
+  // a debe ser igual b
+  return 0;});
+  return onlyString[0];
+
+  //esto es una funcion comparadora, si la cantidad de caracteres de a es menor que la de b devolve -1.
+  // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 }
 
 // No modifiques nada debajo de esta linea //
